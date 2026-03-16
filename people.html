@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="DaSH Lab, People, BITS Pilani, K K Birla Goa Campus, India">
       <meta name="author" content="">
+      <script>(function(){try{if(localStorage.getItem("dashlab-theme")==="dark"){document.documentElement.classList.add("dark-mode");}}catch(e){}})();</script>
       <!-- Le styles -->
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -66,12 +67,18 @@
             <div class="span3 bs-docs-sidebar" id="navparent">
                <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="200" data-offset-bottom="260">
                   <li><a href="#principalinvestigator"> Principal Investigator </a></li>
-                  <li><a href="#postdoc">Postdoc</a></li>
                   <li><a href="#phd">Ph.D. Students</a></li>
                   <li><a href="#undergraduate">Undergraduate Students</a></li>
                   <li><a href="#fdalumni">First-Degree Alumni</a></li>
                   <li><a href="#hdalumni">Higher-Degree Alumni</a></li>
                </ul>
+            </div>
+            <div id="image-lightbox" style="display:none; position:fixed; z-index:3000; inset:0; background:rgba(0,0,0,0.96); align-items:center; justify-content:center; padding:0; overflow:hidden; touch-action:none;">
+               <button id="image-lightbox-prev" type="button" style="position:absolute; left:14px; top:50%; transform:translateY(-50%); background:transparent; border:none; color:#fff; font-size:42px; line-height:1; cursor:pointer;" aria-label="Previous image">&#8592;</button>
+               <button id="image-lightbox-next" type="button" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); background:transparent; border:none; color:#fff; font-size:42px; line-height:1; cursor:pointer;" aria-label="Next image">&#8594;</button>
+               <button id="image-lightbox-close" type="button" style="position:absolute; top:14px; right:18px; background:transparent; border:none; color:#fff; font-size:36px; line-height:1; cursor:pointer;" aria-label="Close image viewer">×</button>
+               <img id="image-lightbox-img" src="" alt="" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:auto; height:auto; max-width:96vw; max-height:96vh; display:block; margin:0; border:none; box-shadow:none; border-radius:0;" />
+               <div id="image-lightbox-caption" style="position:absolute; left:50%; bottom:16px; transform:translateX(-50%); color:#fff; font-size:16px; line-height:1.3; padding:6px 12px; background:rgba(0,0,0,0.35); border-radius:4px; text-align:center; max-width:90vw; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"></div>
             </div>
             <div class="span8 offset1">
                <section id="principalinvestigator">
@@ -92,24 +99,6 @@
                         <p><b>Email: </b><a href="mailto:your.email@uni.edu">your.email@uni.edu</a></p>
                         <p><b>Address: </b>999 Fake Street Avenue, City, State Country ZIP</p>--->
                         <p><b><a href="https://arnabkrpaul.github.io/">Website</a>, <a href="https://scholar.google.co.in/citations?hl=en&user=az8MAG0AAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>, <a href="https://www.linkedin.com/in/arnabkrpaul/">Linkedin</a></b></p>
-                     </div>
-                  </div>
-               </section>
-               <hr>
-               <section id="postdoc">
-                  <div class="page-header">
-                     <h3>Postdoctoral Research Associate</h3>
-                  </div>
-                  <div class="row-fluid">
-                     <div class="span3">
-                        <a href="" class="thumbnail">
-                        <img src="thumbs/members/pinki.jpeg" alt="Pinki Yadav"/>
-                        </a>
-                     </div>
-                     <div class="span9">
-                        <h4><a href="https://www.linkedin.com/in/dr-pinki-yadav-468a46133/">Pinki Yadav</a></h4>
-                        <p><b>Jan 2023 - present</b></p>
-                        <p>Ph.D. in Mathematics, BITS Pilani - Pilani Campus<br/><b>Research Area: </b>Privacy-Aware Data Compression</p>
                      </div>
                   </div>
                </section>
@@ -426,16 +415,6 @@
                         </li>
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/man.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Vivek Panchagnula</center></p>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="row-fluid">
-                     <ul class="thumbnails da-thumbs">
-                        <li class="span4">
-                           <a class="thumbnail" >
                            <img alt="" src="thumbs/members/yogesh.jpeg" style="height: 125px;">            
                            </a>
                            <p class="caption"> <center><a href="https://www.linkedin.com/in/yogesh-singla-793072251/">Yogesh Singla</a></center></p>
@@ -510,7 +489,7 @@
                            <a class="thumbnail" >
                            <img alt="" src="thumbs/members/arnavg.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center>Arnav Gupta<br/>B.E. CSE (2025)<br/>PLACEHOLDER 1, PLACEHOLDER 2</center></p>
+                           <p class="caption"> <center>Arnav Gupta<br/>B.E. CSE (2025)<br/></center></p>
                         </li>
                      </ul>
                   </div>
@@ -704,6 +683,12 @@
                            </a>
                            <p class="caption"> <center><a href = "https://www.linkedin.com/in/madhu-m-pandurangi-b49677156/">Madhu Pandurangi</a><br/>M.E. CSE (2024)<br/>Druva</center></p>
                         </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/pinki.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/dr-pinki-yadav-468a46133/">Pinki Yadav</a><br/>Ph.D. Mathematics<br/>BITS Pilani</center></p>
+                        </li>
                      </ul>
                   </div>
                </section>  
@@ -745,12 +730,292 @@
       <!-- Placed at the end of the document so the pages load faster -->
       <script src="js/jquery-1.9.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
+      <script src="js/theme-toggle.js"></script>
       <script>
          $(document).ready(function() {
              $(document.body).scrollspy({
                  target: "#navparent"
              });
          });
+
+         (function () {
+            var peopleRoot = document.querySelector('.span8.offset1');
+            var photoLinks = peopleRoot ? peopleRoot.querySelectorAll('a.thumbnail') : null;
+            var lightbox = document.getElementById('image-lightbox');
+            var lightboxImg = document.getElementById('image-lightbox-img');
+            var lightboxCaption = document.getElementById('image-lightbox-caption');
+            var prevBtn = document.getElementById('image-lightbox-prev');
+            var nextBtn = document.getElementById('image-lightbox-next');
+            var closeBtn = document.getElementById('image-lightbox-close');
+            var photoItems = [];
+            var currentIndex = -1;
+
+            if (!peopleRoot || !photoLinks || !photoLinks.length || !lightbox || !lightboxImg || !lightboxCaption || !prevBtn || !nextBtn || !closeBtn) {
+               return;
+            }
+
+            function normalizeText(value) {
+               return (value || '').replace(/\s+/g, ' ').trim();
+            }
+
+            function findAncestorByClass(node, className) {
+               while (node && node !== document) {
+                  if (node.nodeType === 1 && node.classList && node.classList.contains(className)) {
+                     return node;
+                  }
+                  node = node.parentNode;
+               }
+               return null;
+            }
+
+            function findAncestorByTag(node, tagName) {
+               tagName = (tagName || '').toUpperCase();
+               while (node && node !== document) {
+                  if (node.nodeType === 1 && node.tagName === tagName) {
+                     return node;
+                  }
+                  node = node.parentNode;
+               }
+               return null;
+            }
+
+            function firstNonEmptyLine(value) {
+               var lines = (value || '').split(/\n+/);
+               var i;
+               for (i = 0; i < lines.length; i += 1) {
+                  var line = normalizeText(lines[i]);
+                  if (line) {
+                     return line;
+                  }
+               }
+               return '';
+            }
+
+            function getCaptionForLink(link, thumbImg) {
+               var listItem = findAncestorByTag(link, 'LI');
+               if (listItem) {
+                  var captionEl = listItem.querySelector('p.caption');
+                  if (captionEl) {
+                     var captionAnchor = captionEl.querySelector('a');
+                     if (captionAnchor) {
+                        var anchorText = normalizeText(captionAnchor.textContent || captionAnchor.innerText || '');
+                        if (anchorText) {
+                           return anchorText;
+                        }
+                     }
+
+                     var firstLine = firstNonEmptyLine(captionEl.innerText || captionEl.textContent || '');
+                     if (firstLine) {
+                        return firstLine;
+                     }
+
+                     var nameLink = captionEl.querySelector('a');
+                     if (nameLink) {
+                        var linkName = normalizeText(nameLink.innerText || nameLink.textContent || '');
+                        if (linkName) {
+                           return linkName;
+                        }
+                     }
+                  }
+
+                  // Last resort for list cards: use LI text and keep only the first meaningful line.
+                  var listText = firstNonEmptyLine(listItem.innerText || listItem.textContent || '');
+                  if (listText) {
+                     return listText;
+                  }
+               }
+
+               var row = findAncestorByClass(link, 'row-fluid');
+               if (row) {
+                  var heading = row.querySelector('.span9 h4');
+                  if (heading) {
+                     var headingText = normalizeText(heading.innerText || heading.textContent || '');
+                     if (headingText) {
+                        return headingText;
+                     }
+                  }
+               }
+
+               var altText = thumbImg ? normalizeText(thumbImg.getAttribute('alt')) : '';
+               return altText || 'Photo';
+            }
+
+            function getImageSource(link, thumbImg) {
+               var src = (thumbImg && thumbImg.getAttribute('src')) ? thumbImg.getAttribute('src') : '';
+               src = normalizeText(src);
+               if (src) {
+                  return src;
+               }
+
+               var href = normalizeText(link.getAttribute('href'));
+               if (href && href !== '#') {
+                  return href;
+               }
+
+               return '';
+            }
+
+            function buildPhotoItems() {
+               var i;
+               for (i = 0; i < photoLinks.length; i += 1) {
+                  var link = photoLinks[i];
+                  var thumbImg = link.getElementsByTagName('img')[0];
+                  var source = getImageSource(link, thumbImg);
+
+                  if (!source) {
+                     continue;
+                  }
+
+                  var caption = getCaptionForLink(link, thumbImg);
+                  photoItems.push({
+                     link: link,
+                     src: source,
+                     caption: caption
+                  });
+
+                  // Ensure thumbnail clicks never navigate to top/external pages.
+                  link.setAttribute('href', '#');
+               }
+            }
+
+            function findItemIndexByLink(link) {
+               var i;
+               for (i = 0; i < photoItems.length; i += 1) {
+                  if (photoItems[i].link === link) {
+                     return i;
+                  }
+               }
+               return -1;
+            }
+
+            function openAt(index) {
+               if (!photoItems.length) {
+                  return;
+               }
+
+               if (index < 0) {
+                  index = photoItems.length - 1;
+               }
+               if (index >= photoItems.length) {
+                  index = 0;
+               }
+
+               var item = photoItems[index];
+               if (!item) {
+                  return;
+               }
+
+               currentIndex = index;
+               lightboxImg.src = item.src;
+               lightboxImg.alt = item.caption;
+               lightboxCaption.textContent = item.caption;
+               lightbox.style.display = 'flex';
+               document.documentElement.style.overflow = 'hidden';
+               document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+               lightbox.style.display = 'none';
+               lightboxImg.src = '';
+               lightboxImg.alt = '';
+               lightboxCaption.textContent = '';
+               currentIndex = -1;
+               document.documentElement.style.overflow = '';
+               document.body.style.overflow = '';
+            }
+
+            function showPrevious() {
+               if (lightbox.style.display === 'flex') {
+                  openAt(currentIndex - 1);
+               }
+            }
+
+            function showNext() {
+               if (lightbox.style.display === 'flex') {
+                  openAt(currentIndex + 1);
+               }
+            }
+
+            buildPhotoItems();
+            if (!photoItems.length) {
+               return;
+            }
+
+            peopleRoot.onclick = function (event) {
+               event = event || window.event;
+               var target = event.target || event.srcElement;
+               var link = target;
+
+               while (link && link.tagName !== 'A') {
+                  link = link.parentNode;
+               }
+
+               if (!link || link.className.indexOf('thumbnail') === -1) {
+                  return;
+               }
+
+               if (event.preventDefault) {
+                  event.preventDefault();
+               } else {
+                  event.returnValue = false;
+               }
+
+               var selectedIndex = findItemIndexByLink(link);
+
+               if (selectedIndex === -1) {
+                  return;
+               }
+
+               openAt(selectedIndex);
+            };
+
+            lightboxImg.onclick = function (event) {
+               if (event && event.stopPropagation) {
+                  event.stopPropagation();
+               }
+            };
+
+            prevBtn.onclick = function (event) {
+               if (event && event.preventDefault) {
+                  event.preventDefault();
+               }
+               if (event && event.stopPropagation) {
+                  event.stopPropagation();
+               }
+               showPrevious();
+            };
+
+            nextBtn.onclick = function (event) {
+               if (event && event.preventDefault) {
+                  event.preventDefault();
+               }
+               if (event && event.stopPropagation) {
+                  event.stopPropagation();
+               }
+               showNext();
+            };
+
+            closeBtn.onclick = function (event) {
+               if (event && event.stopPropagation) {
+                  event.stopPropagation();
+               }
+               closeLightbox();
+            };
+
+            document.addEventListener('keydown', function (event) {
+               if (lightbox.style.display !== 'flex') {
+                  return;
+               }
+
+               if (event.key === 'Escape' || event.keyCode === 27) {
+                  closeLightbox();
+               } else if (event.key === 'ArrowLeft' || event.keyCode === 37 || event.key === '<') {
+                  showPrevious();
+               } else if (event.key === 'ArrowRight' || event.keyCode === 39 || event.key === '>') {
+                  showNext();
+               }
+            });
+         })();
          
       </script>
    </body>

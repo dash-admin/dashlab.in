@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="DaSH Lab, Gallery, BITS Pilani, K K Birla Goa Campus, India">
       <meta name="author" content="">
+      <script>(function(){try{if(localStorage.getItem("dashlab-theme")==="dark"){document.documentElement.classList.add("dark-mode");}}catch(e){}})();</script>
       <!-- Le styles -->
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -14,6 +15,25 @@
       <link href="css/blueimp-gallery.min.css" rel="stylesheet" >
       <link href="css/blueimp-gallery-video.css" rel="stylesheet" >
       <link href="css/scroll.css" rel="stylesheet">
+      <style>
+         /* Keep thumbnail heights consistent while allowing natural width scaling. */
+         .span8.offset1 section a.thumbnail {
+            height: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+         }
+
+         .span8.offset1 section a.thumbnail img {
+            height: 125px !important;
+            width: auto !important;
+            max-width: 100% !important;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+         }
+      </style>
       <script type="text/javascript">
          (function(c,l,a,r,i,t,y){
              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -74,14 +94,280 @@
             <a class="play-pause"></a>
             <ol class="indicator"></ol>
          </div>
+         <div id="image-lightbox" style="display:none; position:fixed; z-index:3000; inset:0; background:rgba(0,0,0,0.96); align-items:center; justify-content:center; padding:0; overflow:hidden; touch-action:none;">
+            <button id="image-lightbox-prev" type="button" style="position:absolute; left:14px; top:50%; transform:translateY(-50%); background:transparent; border:none; color:#fff; font-size:42px; line-height:1; cursor:pointer;" aria-label="Previous image">&#8592;</button>
+            <button id="image-lightbox-next" type="button" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); background:transparent; border:none; color:#fff; font-size:42px; line-height:1; cursor:pointer;" aria-label="Next image">&#8594;</button>
+            <button id="image-lightbox-close" type="button" style="position:absolute; top:14px; right:18px; background:transparent; border:none; color:#fff; font-size:36px; line-height:1; cursor:pointer;" aria-label="Close image viewer">×</button>
+            <img id="image-lightbox-img" src="" alt="" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:auto; height:auto; max-width:96vw; max-height:96vh; display:block; margin:0; border:none; box-shadow:none; border-radius:0;" />
+         </div>
          <div class="row-fluid">
             <div class="span3 bs-docs-sidebar" id="navparent">
                <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="200" data-offset-bottom="260">
+                  <li><a href="#imagegallery2025_hipc"> 2025 </a></li>
                   <li><a href="#imagegallery1"> 2024 </a></li>
                   <li><a href="#imagegallery2"> 2023 </a></li>
                </ul>
             </div>
             <div class="span8 offset1">
+               <section id="imagegallery2025_hipc">
+                  <h4>HiPC 2025, Hyderabad, India</h4>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/hipc_2025_1.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/hipc_2025_1.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/hipc_2025_2.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/hipc_2025_2.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/hipc_2025_3.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/hipc_2025_3.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/hipc_2025_4.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/hipc_2025_4.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/hipc_2025_5.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/hipc_2025_5.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/hipc_2025_6.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/hipc_2025_6.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/hipc_2025_7.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/hipc_2025_7.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               <section id="imagegallery2025_cricket">
+                  <h4>Legends T20 Cricket League, 2025</h4>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/cricket1.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/cricket1.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/cricket2.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/cricket2.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/cricket3.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/cricket3.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/cricket4.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/cricket4.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/cricket5.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/cricket5.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               <section id="imagegallery2025_iisc">
+                  <h4>India-Japan STI Forum, IISc Bangalore, 2025</h4>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/iisc1.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/iisc1.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/iisc2.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/iisc2.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/iisc3.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/iisc3.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/iisc4.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/iisc4.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/iisc5.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/iisc5.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/iisc6.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/iisc6.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               <section id="imagegallery2025_dashcric">
+                  <h4>DaSHLab Cricket Match, 2025</h4>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/dashcric1.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/dashcric1.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/dashcric2.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/dashcric2.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/dashcric3.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/dashcric3.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/dashcric4.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/dashcric4.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               <section id="imagegallery2025_middleware">
+                  <h4>Middleware 2025, Nashville, USA</h4>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/midware1.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/midware1.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               <section id="imagegallery2025_open">
+                  <h4>Open Day 2025, BITS Goa</h4>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/open1.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/open1.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/open2.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/open2.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/open3.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/open3.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/open4.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/open4.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/open5.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/open5.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               <section id="imagegallery2025_outing">
+                  <h4>Nandanvan Spice Farm Outing, Goa 2025</h4>
+                  <div class="row-fluid">
+                     <ul class="thumbnails">
+                        <li class="span4">
+                           <a href="thumbs/out1.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/out1.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/out2.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/out2.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                        <li class="span4">
+                           <a href="thumbs/out3.jpg" class="thumbnail" title="">
+                           <img alt="" src="thumbs/out3.jpg" style="width: 187px; height: 125px;">
+                           </a>
+                           <p class="caption"></p>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
                <section id="imagegallery1">
                <!-- <div class="page-header"> -->
                   <h4>Keynote at NetApp Startup Excellerator Event 2024, Bangalore, India</h4>
@@ -420,6 +706,7 @@
       <!--<script src="js/jquery-1.9.1.min.js"></script>-->
       <script src="js/jquery-1.9.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
+      <script src="js/theme-toggle.js"></script>
       <script src="js/blueimp-gallery.min.js"></script>
       <script>
          $(document).ready(function() {
@@ -427,87 +714,149 @@
              target: "#navparent"
           });
          });
-         
-         document.getElementById('imagegallery1').onclick = function (event) {
-          event = event || window.event;
-          var target = event.target || event.srcElement,
-              link = target.src ? target.parentNode : target,
-              options = {index: link, event: event},
-              links = this.getElementsByTagName('a');
-          blueimp.Gallery(links, options);
-         };
-         
-         document.getElementById('imagegallery2').onclick = function (event) {
-          event = event || window.event;
-          var target = event.target || event.srcElement,
-              link = target.src ? target.parentNode : target,
-              options = {index: link, event: event},
-              links = this.getElementsByTagName('a');
-          blueimp.Gallery(links, options);
-         };        
 
-         document.getElementById('imagegallery3').onclick = function (event) {
-          event = event || window.event;
-          var target = event.target || event.srcElement,
-              link = target.src ? target.parentNode : target,
-              options = {index: link, event: event},
-              links = this.getElementsByTagName('a');
-          blueimp.Gallery(links, options);
-         };   
+         (function () {
+            var galleryRoot = document.querySelector('.span8.offset1');
+            var galleryLinks = galleryRoot ? galleryRoot.querySelectorAll('a.thumbnail') : null;
+            var lightbox = document.getElementById('image-lightbox');
+            var lightboxImg = document.getElementById('image-lightbox-img');
+            var prevBtn = document.getElementById('image-lightbox-prev');
+            var nextBtn = document.getElementById('image-lightbox-next');
+            var closeBtn = document.getElementById('image-lightbox-close');
+            var currentIndex = -1;
 
-         document.getElementById('imagegallery4').onclick = function (event) {
-          event = event || window.event;
-          var target = event.target || event.srcElement,
-              link = target.src ? target.parentNode : target,
-              options = {index: link, event: event},
-              links = this.getElementsByTagName('a');
-          blueimp.Gallery(links, options);
-         }; 
-         
-         document.getElementById('imagegallery5').onclick = function (event) {
-          event = event || window.event;
-          var target = event.target || event.srcElement,
-              link = target.src ? target.parentNode : target,
-              options = {index: link, event: event},
-              links = this.getElementsByTagName('a');
-          blueimp.Gallery(links, options);
-         }; 
+            if (!galleryRoot || !galleryLinks || !galleryLinks.length || !lightbox || !lightboxImg || !prevBtn || !nextBtn || !closeBtn) {
+               return;
+            }
 
-         document.getElementById('imagegallery6').onclick = function (event) {
-          event = event || window.event;
-          var target = event.target || event.srcElement,
-              link = target.src ? target.parentNode : target,
-              options = {index: link, event: event},
-              links = this.getElementsByTagName('a');
-          blueimp.Gallery(links, options);
-         }; 
+            function openAt(index) {
+               if (index < 0) {
+                  index = galleryLinks.length - 1;
+               }
+               if (index >= galleryLinks.length) {
+                  index = 0;
+               }
 
-         document.getElementById('imagegallery1_nsm').onclick = function (event) {
-          event = event || window.event;
-          var target = event.target || event.srcElement,
-              link = target.src ? target.parentNode : target,
-              options = {index: link, event: event},
-              links = this.getElementsByTagName('a');
-          blueimp.Gallery(links, options);
-         };
+               var link = galleryLinks[index];
+               if (!link) {
+                  return;
+               }
 
-         document.getElementById('imagegallery2_dudhsagar').onclick = function (event) {
-          event = event || window.event;
-          var target = event.target || event.srcElement,
-              link = target.src ? target.parentNode : target,
-              options = {index: link, event: event},
-              links = this.getElementsByTagName('a');
-          blueimp.Gallery(links, options);
-         };
-         
-         document.getElementById('imagegallery_visitor23').onclick = function (event) {
-          event = event || window.event;
-          var target = event.target || event.srcElement,
-              link = target.src ? target.parentNode : target,
-              options = {index: link, event: event},
-              links = this.getElementsByTagName('a');
-          blueimp.Gallery(links, options);
-         };
+               var thumbImg = link.getElementsByTagName('img')[0];
+               var imageSrc = (thumbImg && thumbImg.src) ? thumbImg.src : link.getAttribute('href');
+               if (!imageSrc) {
+                  return;
+               }
+
+               currentIndex = index;
+               lightboxImg.src = imageSrc;
+               lightbox.style.display = 'flex';
+               document.documentElement.style.overflow = 'hidden';
+               document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+               lightbox.style.display = 'none';
+               lightboxImg.src = '';
+               currentIndex = -1;
+               document.documentElement.style.overflow = '';
+               document.body.style.overflow = '';
+            }
+
+            function showPrevious() {
+               if (lightbox.style.display === 'flex') {
+                  openAt(currentIndex - 1);
+               }
+            }
+
+            function showNext() {
+               if (lightbox.style.display === 'flex') {
+                  openAt(currentIndex + 1);
+               }
+            }
+
+            galleryRoot.onclick = function (event) {
+               event = event || window.event;
+               var target = event.target || event.srcElement;
+               var link = target;
+
+               while (link && link.tagName !== 'A') {
+                  link = link.parentNode;
+               }
+
+               if (!link || link.className.indexOf('thumbnail') === -1) {
+                  return;
+               }
+
+               if (event.preventDefault) {
+                  event.preventDefault();
+               } else {
+                  event.returnValue = false;
+               }
+
+               var i;
+               var selectedIndex = -1;
+               for (i = 0; i < galleryLinks.length; i += 1) {
+                  if (galleryLinks[i] === link) {
+                     selectedIndex = i;
+                     break;
+                  }
+               }
+
+               if (selectedIndex === -1) {
+                  return;
+               }
+
+               openAt(selectedIndex);
+            };
+
+            lightboxImg.onclick = function (event) {
+               if (event && event.stopPropagation) {
+                  event.stopPropagation();
+               }
+            };
+
+            prevBtn.onclick = function (event) {
+               if (event && event.preventDefault) {
+                  event.preventDefault();
+               }
+               if (event && event.stopPropagation) {
+                  event.stopPropagation();
+               }
+               showPrevious();
+            };
+
+            nextBtn.onclick = function (event) {
+               if (event && event.preventDefault) {
+                  event.preventDefault();
+               }
+               if (event && event.stopPropagation) {
+                  event.stopPropagation();
+               }
+               showNext();
+            };
+
+            closeBtn.onclick = function (event) {
+               if (event && event.stopPropagation) {
+                  event.stopPropagation();
+               }
+               closeLightbox();
+            };
+
+            document.addEventListener('keydown', function (event) {
+               if (lightbox.style.display !== 'flex') {
+                  return;
+               }
+
+               if (event.key === 'Escape' || event.keyCode === 27) {
+                  closeLightbox();
+               } else if (event.key === 'ArrowLeft' || event.keyCode === 37 || event.key === '<') {
+                  showPrevious();
+               } else if (event.key === 'ArrowRight' || event.keyCode === 39 || event.key === '>') {
+                  showNext();
+               }
+            });
+         })();
       </script>  
    </body>
 </html>
