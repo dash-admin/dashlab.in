@@ -69,12 +69,18 @@
                <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="260" style="width: fit-content; max-height: 30em; overflow: scroll;"> 
                   <!---<li><a href="#statemet"> Lorem Ipsum </a></li>--->
                   <li><a href="#data">Data and I/O</a></li>
+                  <li><a class="subhead" href="#iouring"> I/O Uring </a></li>
                   <li><a class="subhead" href="#compr"> Data Compression </a></li>
                   <li><a class="subhead" href="#dataspaces"> DataSpaces</a></li>
-                  <li><a class="subhead" href="#iouring"> I/O Uring </a></li>
                   <li><a href="#sysml">Systems for ML</a></li>
-                  <li><a class="subhead" href="#bcfl"> Systems for Fed Learning (FL) </a></li>
-                  <li><a class="subhead" href="#mlops"> MLOps </a></li>
+                  <li><a class="subhead" href="#privfl"> Privacy-aware Federated Learning </a></li>
+                  <li><a class="subhead" href="#multimodalfl"> Multi-Modal Federated Learning </a></li>
+                  <li><a class="subhead" href="#flav"> FL for Autonomous Vehicles </a></li>
+                  <li><a class="subhead" href="#potfl"> Proof of Training in FL </a></li>
+                  <li><a class="subhead" href="#mlops"> Operation Pipeline in FL </a></li>
+                  <li><a class="subhead" href="#llmsched"> Scheduling LLM Inference </a></li>
+                  <li><a class="subhead" href="#slmedge"> SLMs on Edge Devices </a></li>
+                  <li><a class="subhead" href="#bcfl"> Cross-Silo FL </a></li>
                   <li><a class="subhead" href="#tinyml"> Data Caching in TinyML </a></li>
                   <li><a href="#distributed">Distributed Systems</a></li>
                   <li><a class="subhead" href="#serverless"> Trust in Serverless </a></li>
@@ -109,6 +115,23 @@
                   </div>
                   <div class="row-fluid">
                      <div class="span12">
+                        <section id="iouring">
+                           <h4>I/O Uring (Ongoing)</h4>
+                           <br/>
+                           <img src="images/iouring.png" class="float-right" style="height: 4cm;" alt="pfs"/>
+                           <p>
+                              <ul>
+                                 <li>How can kernel I/O optimizations affect different large-scale use-cases?</li>
+                                 <li>Which aspects of key value stores and databases can benefit from I/O uring optimizationsat the kernel level?</li>
+                              </ul>
+                           </p>
+                           <p>
+                              <b>BITS Pilani Personnel: </b>Arnav Gupta, Druva Dakshinamoorthy, Arjun Jagtap
+                              <br/>
+                              <b>Few Published Papers: </b><a href="https://ieeexplore.ieee.org/iel8/10740708/10740804/10740888.pdf">Cluster2024</a>
+                           </p>
+                        </section>
+                        <hr>
                         <section id="compr">
                            <h4>Data Compression (Completed)</h4>
                            <br/>
@@ -148,22 +171,6 @@
                            </p>
                         </section>
                         <hr>
-                        <section id="iouring">
-                           <h4>I/O Uring (Ongoing)</h4>
-                           <br/>
-                           <img src="images/iouring.png" class="float-right" style="height: 4cm;" alt="pfs"/>
-                           <p>
-                              <ul>
-                                 <li>How can kernel I/O optimizations affect different large-scale use-cases?</li>
-                                 <li>Which aspects of key value stores and databases can benefit from I/O uring optimizationsat the kernel level?</li>
-                              </ul>
-                           </p>
-                           <p>
-                              <b>BITS Pilani Personnel: </b>Arnav Gupta, Druva Dakshinamoorthy, Arjun Jagtap
-                              <br/>
-                              <b>Few Published Papers: </b><a href="https://ieeexplore.ieee.org/iel8/10740708/10740804/10740888.pdf">Cluster2024</a>
-                           </p>
-                           </section>
                      </div>
                   </div>
                </section>
@@ -175,8 +182,128 @@
                   </div>
                   <div class="row-fluid">
                      <div class="span12">
+                        <section id="privfl">
+                           <h4>Privacy-aware Federated Learning (Ongoing)</h4>
+                           <br/>
+                           <p>
+                              <ul>
+                                 <li>How can we adaptively tune parameters for different privacy-preserving methods in FL?</li>
+                                 <li>How does privacy preserving techniques get impacted by heterogeneity in the FL clusters?</li>
+                              </ul>
+                           </p>
+                           <p>
+                              <b>BITS Pilani Personnel: </b>Adithya Balasubramanian, Nischit Kumar, Aishwarya Jayashankar
+                              <br/>
+                           </p>
+                        </section>
+                        <hr>
+                        <section id="multimodalfl">
+                           <h4>Multi-Modal Federated Learning (Ongoing)</h4>
+                           <br/>
+                           <img src="images/blossom.png" class="float-right" style="height: 3cm;" alt="blossom"/>
+                           <p>
+                              <ul>
+                                 <li>How can we aggregate FL clusters holding different modes of data?</li>
+                                 <li>How can FL aggregation handle missing modalities?</li>
+                              </ul>
+                           </p>
+                           <p>
+                              <b>Collaborators: </b>Queen Mary University of London - UK
+                              <br/>
+                              <b>BITS Pilani Personnel: </b>Pranav M R, Jayant Chandwani
+                              <br/>
+                              <b>Other Personnel: </b><a href="https://eecs.qmul.ac.uk/~ahmed/">Ahmed Sayed</a>
+                              <br/>
+                           </p>
+                        </section>
+                        <hr>
+                        <section id="flav">
+                           <h4>FL for Autonomous Vehicles (Ongoing)</h4>
+                           <br/>
+                           <img src="images/autofl.png" class="float-right" style="height: 3cm;" alt="flops"/>
+                           <p>
+                              <ul>
+                                 <li>How can FL be used for vehicles with streaming data?</li>
+                                 <li>How the FL techniques adapt to the changing networking environment of vehicles?</li>
+                              </ul>
+                           </p>
+                           <p>
+                              <b>BITS Pilani Personnel: </b>Vimarsh Shah, Harsh Chothani, Marichamy Kasi
+                              <br/>
+                              <b>Few Published Papers: </b>HiPC’25 Poster
+                              <br/>
+                           </p>
+                        </section>
+                        <hr>
+                        <section id="potfl">
+                           <h4>Proof of Training in FL (Ongoing)</h4>
+                           <br/>
+                           <p>
+                              <ul>
+                                 <li>How can clusters verify that clients actually do the training?</li>
+                                 <li>How can cross-silo FL get validation that all participating clusters are training well?</li>
+                              </ul>
+                           </p>
+                           <p>
+                              <b>BITS Pilani Personnel: </b>Ojas Marathe, Surya Datta, Abhishek Kumar
+                              <br/>
+                           </p>
+                        </section>
+                        <hr>
+                        <section id="mlops">
+                           <h4>Operation Pipeline in FL (Ongoing)</h4>
+                           <br/>
+                           <img src="images/flops.png" class="float-right" style="height: 3cm;" alt="flops"/>
+                           <p>
+                              <ul>
+                                 <li>How to integrate automation of fault tolerance in MLOps pipeline?</li>
+                                 <li>Can optimizations be done for deploying FL workloads using FLOps?</li>
+                                 <li>Can intelligent Infrastructure-As-Code (IAC) be deployed for MLOps?</li>
+                              </ul>
+                           </p>
+                           <p>
+                              <b>Collaborators: </b>Queen Mary University of London - UK
+                              <br/>
+                              <b>BITS Pilani Personnel: </b>Vimarsh Shah, Aryan Bethmangalkar, Sarang S, Harsh Chothani, Aishwarya Jayashankar, Ayush Bharadwaj
+                              <br/>
+                              <b>Other Personnel: </b><a href="https://eecs.qmul.ac.uk/~ahmed/">Ahmed Sayed</a>
+                              <br/>
+                              <b>Few Published Papers: </b><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10898668">HiPC 2024 Poster</a>, <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11262612">ICDCS 2025 Workshop</a>
+                           </p>
+                        </section>
+                        <hr>
+                        <section id="llmsched">
+                           <h4>Scheduling LLM Inference Tasks (Ongoing)</h4>
+                           <br/>
+                           <p>
+                              <ul>
+                                 <li>How can you design a scheduler that is resource-aware for a heterogeneous cluster of GPUs while scheduling LLM inference jobs?</li>
+                                 <li>Furthermore, can you make the scheduler network-aware?</li>
+                              </ul>
+                           </p>
+                           <p>
+                              <b>BITS Pilani Personnel: </b>Aditya Shiva Sharma, Atharva Pandit
+                              <br/>
+                           </p>
+                        </section>
+                        <hr>
+                        <section id="slmedge">
+                           <h4>Small Language Models on Edge Devices (Ongoing)</h4>
+                           <br/>
+                           <p>
+                              <ul>
+                                 <li>How can SLMs be resource-aware on edge devices?</li>
+                                 <li>Can the SLM tasks be be application aware on mobile devices?</li>
+                              </ul>
+                           </p>
+                           <p>
+                              <b>BITS Pilani Personnel: </b>Soham Dambalkar, Utkarsh Sharma, Kunal Mishra
+                              <br/>
+                           </p>
+                        </section>
+                        <hr>
                         <section id="bcfl">
-                           <h4>Systems for Federated Learning (FL)</h4>
+                           <h4>Cross-Silo Federated Learning (Completed)</h4>
                            <br/>
                            <img src="images/bcfl.jpg" class="float-right" style="height: 3cm;" alt="pfs"/>
                            <p>
@@ -194,37 +321,24 @@
                               <br/>
                               <b>Other Personnel: </b><a href="https://eecs.qmul.ac.uk/~ahmed/">Ahmed Sayed</a>, <a href="https://cs.rit.edu/~mrafique/">M. Mustafa Rafique</a>
                               <br/>
-                              <b>Few Published Papers: </b><a href="https://doi.org/10.1109/HiPCW61695.2023.00021">Poster@HiPC23</a>
-                           </p>
-                        </section>
-                        <hr>
-                        <section id="mlops">
-                           <h4>MLOps</h4>
-                           <br/>
-                           <p>
-                              <ul>
-                                 <li>How to integrate automation of fault tolerance in MLOps pipeline?</li>
-                                 <li>Can optimizations be done for deploying FL workloads using FLOps?</li>
-                                 <li>Can intelligent Infrastructure-As-Code (IAC) be deployed for MLOps?</li>
-                              </ul>
-                           </p>
-                           <p>
-                              <b>BITS Pilani Personnel: </b>Aishwarya Jayashankar, Ayush Bharadwaj
-                              <br/>
+                              <b>Few Published Papers: </b><a href="https://dl.acm.org/doi/10.1145/3721462.3730955">Middleware 2025</a>, <a href="https://doi.org/10.1109/HiPCW61695.2023.00021">Poster@HiPC23</a>
                            </p>
                         </section>
                         <hr>
                         <section id="tinyml">
-                           <h4>Data Caching in TinyML</h4>
+                           <h4>Data Caching in TinyML (Completed)</h4>
                            <br/>
+                           <img src="images/lessismore.png" class="float-right" style="height: 3cm;" alt="lessismore"/>
+                           <p>
                               <ul>
                                  <li>How can distributed tinyML training be made aware of the heterogeneous edge environment?</li>
                                  <li>Can the datasets used for tinyML training be cached given the low resources on the devices?</li>
                               </ul>
                            </p>
                            <p>
-                              <b>BITS Pilani Personnel: </b>Advik Raj, Sidharth C. Vivek
+                              <b>BITS Pilani Personnel: </b>Advik Raj, Sidharth C. Vivek, Advaith Krishna
                               <br/>
+                              <b>Few Published Papers: </b><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10884396">HiPC'24</a>
                            </p>
                            </section>
                            <hr>
