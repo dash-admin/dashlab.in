@@ -1,0 +1,614 @@
+/* Dark Mode Overrides */
+
+/* Base body styling */
+html.dark-mode body {
+	background-color: #1a1a1a;
+	color: #e0e0e0;
+}
+
+/* Links */
+html.dark-mode a {
+	color: #60a5fa;
+}
+
+html.dark-mode a:hover,
+html.dark-mode a:focus {
+	color: #93c5fd;
+}
+
+/* Headers */
+html.dark-mode h1, html.dark-mode h2, html.dark-mode h3, html.dark-mode h4, html.dark-mode h5, html.dark-mode h6 {
+	color: #f0f0f0;
+}
+
+html.dark-mode h1 small, html.dark-mode h2 small, html.dark-mode h3 small, html.dark-mode h4 small, html.dark-mode h5 small, html.dark-mode h6 small {
+	color: #a0a0a0;
+}
+
+/* Container and content areas */
+html.dark-mode .container {
+	background-color: transparent;
+}
+
+/* Navbar */
+html.dark-mode .navbar .navbar-inner {
+	background-color: #2a2a2a;
+	background-image: none;
+	border-color: #3a3a3a;
+	box-shadow: 0 1px 4px rgba(255, 255, 255, .05);
+}
+
+html.dark-mode .navbar .brand {
+	color: #e0e0e0;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
+}
+
+html.dark-mode .navbar .brand:hover {
+	color: #ffffff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .5), 0 0 30px rgba(255, 255, 255, .3);
+}
+
+html.dark-mode .navbar .nav > li > a {
+	color: #d0d0d0;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
+	background-color: #2a2a2a;
+	border-left-color: rgba(255, 255, 255, .1);
+	border-right-color: rgba(0, 0, 0, .3);
+}
+
+html.dark-mode .navbar .nav > li > a:hover,
+html.dark-mode .navbar .nav > li > a:focus {
+	color: #ffffff;
+	background-color: #333333;
+}
+
+html.dark-mode .navbar .nav > .active > a,
+html.dark-mode .navbar .nav > .active > a:hover,
+html.dark-mode .navbar .nav > .active > a:focus {
+	color: #ffffff;
+	background-color: #0d6efd;
+	box-shadow: inset 0 3px 8px rgba(0, 0, 0, .25);
+}
+
+/* Jumbotron */
+html.dark-mode .jumbotron {
+	background: #1f2937;
+	background: -moz-linear-gradient(45deg, #1f2937 0%, #111827 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #1f2937), color-stop(100%, #111827));
+	background: -webkit-linear-gradient(45deg, #1f2937 0%, #111827 100%);
+	background: -o-linear-gradient(45deg, #1f2937 0%, #111827 100%);
+	background: -ms-linear-gradient(45deg, #1f2937 0%, #111827 100%);
+	background: linear-gradient(45deg, #1f2937 0%, #111827 100%) repeat;
+	color: #f0f0f0;
+	border-bottom-color: #3a3a3a;
+}
+
+html.dark-mode .jumbotron h1 {
+	color: #ffffff;
+}
+
+html.dark-mode .jumbotron .lead {
+	color: #d0d0d0;
+}
+
+html.dark-mode .subhead {
+	border-bottom-color: #3a3a3a;
+}
+
+/* Sidebar navigation */
+html.dark-mode .bs-docs-sidenav {
+	background-color: #2a2a2a !important;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .5);
+}
+
+html.dark-mode .bs-docs-sidenav > li > a,
+html.dark-mode .bs-docs-sidenav > li > a.subhead {
+	color: #d0d0d0 !important;
+	border-color: #3a3a3a !important;
+	background-color: #2a2a2a !important;
+}
+
+html.dark-mode .bs-docs-sidenav > li > a:hover,
+html.dark-mode .bs-docs-sidenav > li > a.subhead:hover {
+	background-color: #333333 !important;
+	color: #ffffff !important;
+}
+
+/* Active state for main items */
+html.dark-mode .bs-docs-sidenav > .active > a,
+html.dark-mode .bs-docs-sidenav > .active > a:hover,
+html.dark-mode .bs-docs-sidenav > .active > a:focus {
+	color: #ffffff !important;
+	background-color: #0d6efd !important;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+}
+
+/* Active state for subheadings */
+html.dark-mode .bs-docs-sidenav > .active > a.subhead,
+html.dark-mode .bs-docs-sidenav > .active > a.subhead:hover,
+html.dark-mode .bs-docs-sidenav > .active > a.subhead:focus {
+	color: #ffffff !important;
+	background-color: #0b5ed7 !important;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+	border-left: 3px solid #60a5fa !important;
+	padding-left: 27px !important;
+}
+
+/* Media/Posts section */
+html.dark-mode #media .post {
+	background: #2a2a2a;
+	box-shadow: 1px 1px 2px 0px #000000;
+}
+
+html.dark-mode #media .post:hover {
+	box-shadow: 0px 1px 5px 1px rgba(100, 100, 100, 0.5);
+}
+
+html.dark-mode #media .post .text h5 a {
+	color: #e0e0e0;
+}
+
+html.dark-mode #media .post:hover .text h5 a {
+	color: #60a5fa;
+}
+
+html.dark-mode #media .post .text span.date {
+	color: #a0a0a0;
+}
+
+html.dark-mode #media .post .text p {
+	color: #d0d0d0;
+}
+
+html.dark-mode #media .post .author_box {
+	border-top-color: #3a3a3a;
+}
+
+html.dark-mode #media .post .author_box h6,
+html.dark-mode #media .post .author_box p {
+	color: #a0a0a0;
+}
+
+html.dark-mode #media .post a.plus_wrapper {
+	background: #2a2a2a;
+}
+
+/* Feature items */
+html.dark-mode .feature-item {
+	background-color: #2a2a2a;
+	border: 1px solid #3a3a3a;
+	color: #d0d0d0;
+}
+
+html.dark-mode .feature-item:hover {
+	box-shadow: 0px 1px 5px 1px rgba(100, 100, 100, 0.5);
+}
+
+html.dark-mode .feature-item h5 {
+	color: #f0f0f0;
+}
+
+/* Map box */
+html.dark-mode .map .box_wrapp {
+	background: #2a2a2a;
+	box-shadow: 0 0 7px 0 rgba(200, 200, 200, 0.2);
+}
+
+/* Thumbnails and images */
+html.dark-mode .thumbnail {
+	background-color: #2a2a2a;
+	border-color: #3a3a3a;
+}
+
+html.dark-mode .img-polaroid {
+	background-color: #2a2a2a;
+	border-color: #3a3a3a;
+}
+
+html.dark-mode #principalinvestigator .thumbnail > img,
+html.dark-mode #postdoc .thumbnail > img,
+html.dark-mode #phd .thumbnail > img,
+html.dark-mode #undergraduate .thumbnails.da-thumbs .thumbnail > img,
+html.dark-mode #fdalumni .thumbnails.da-thumbs .thumbnail > img,
+html.dark-mode #hdalumni .thumbnails.da-thumbs .thumbnail > img {
+	background-color: #1f1f1f;
+}
+
+/* Tables */
+html.dark-mode table {
+	background-color: #2a2a2a;
+	border-color: #3a3a3a;
+}
+
+html.dark-mode thead,
+html.dark-mode tbody,
+html.dark-mode tfoot {
+	background-color: #2a2a2a;
+}
+
+html.dark-mode th {
+	background-color: #333333;
+	color: #f0f0f0;
+	border-color: #3a3a3a;
+}
+
+html.dark-mode td {
+	color: #d0d0d0;
+	border-color: #3a3a3a;
+}
+
+html.dark-mode table tbody tr:hover > td,
+html.dark-mode table tbody tr:hover > th {
+	background-color: #333333;
+}
+
+/* Forms */
+html.dark-mode input,
+html.dark-mode textarea,
+html.dark-mode select,
+html.dark-mode .uneditable-input {
+	background-color: #2a2a2a;
+	color: #e0e0e0;
+	border-color: #3a3a3a;
+}
+
+html.dark-mode input:focus,
+html.dark-mode textarea:focus,
+html.dark-mode select:focus {
+	border-color: #60a5fa;
+	background-color: #333333;
+	box-shadow: 0 0 8px rgba(96, 165, 250, 0.3);
+}
+
+/* Buttons */
+html.dark-mode .btn {
+	background-color: #333333;
+	color: #e0e0e0;
+	border-color: #3a3a3a;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+}
+
+html.dark-mode .btn:hover,
+html.dark-mode .btn:focus {
+	background-color: #404040;
+	color: #ffffff;
+}
+
+html.dark-mode .btn-primary {
+	background-color: #0d6efd;
+	border-color: #0d6efd;
+}
+
+html.dark-mode .btn-primary:hover {
+	background-color: #0b5ed7;
+}
+
+/* Dropdowns */
+html.dark-mode .dropdown-menu {
+	background-color: #2a2a2a;
+	border-color: #3a3a3a;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode .dropdown-menu > li > a {
+	color: #d0d0d0;
+}
+
+html.dark-mode .dropdown-menu > li > a:hover,
+html.dark-mode .dropdown-menu > li > a:focus {
+	background-color: #333333;
+	color: #ffffff;
+}
+
+/* Modals */
+html.dark-mode .modal {
+	background-color: #2a2a2a;
+	border-color: #3a3a3a;
+}
+
+html.dark-mode .modal-header {
+	background-color: #333333;
+	border-bottom-color: #3a3a3a;
+}
+
+html.dark-mode .modal-body {
+	background-color: #2a2a2a;
+}
+
+html.dark-mode .modal-footer {
+	background-color: #333333;
+	border-top-color: #3a3a3a;
+}
+
+/* Alerts */
+html.dark-mode .alert {
+	background-color: #2a2a2a;
+	border-color: #3a3a3a;
+	color: #d0d0d0;
+}
+
+/* Code blocks */
+html.dark-mode pre {
+	background-color: #1f1f1f;
+	border-color: #3a3a3a;
+	color: #e0e0e0;
+}
+
+html.dark-mode code {
+	background-color: #2a2a2a;
+	color: #f0f0f0;
+	border-color: #3a3a3a;
+}
+
+/* Wells */
+html.dark-mode .well {
+	background-color: #2a2a2a;
+	border-color: #3a3a3a;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Accordion */
+html.dark-mode .accordion-group {
+	border-color: #3a3a3a;
+}
+
+html.dark-mode .accordion-heading {
+	background-color: #2a2a2a;
+}
+
+html.dark-mode .accordion-heading a {
+	color: #d0d0d0;
+}
+
+html.dark-mode .accordion-inner {
+	background-color: #2a2a2a;
+	border-top-color: #3a3a3a;
+	color: #d0d0d0;
+}
+
+/* Page header */
+html.dark-mode .page-header {
+	border-bottom-color: #3a3a3a;
+}
+
+html.dark-mode .page-header h3 a {
+	color: #e0e0e0;
+}
+
+html.dark-mode .page-header h3 a:hover {
+	color: #60a5fa;
+}
+
+/* Publications */
+html.dark-mode li.publication {
+	color: #d0d0d0;
+}
+
+/* Footer */
+html.dark-mode #footer {
+	background-color: #0f0f0f;
+	border-top-color: #1f1f1f;
+}
+
+html.dark-mode #footer h3 {
+	color: #60a5fa;
+	border-bottom-color: #1f1f1f;
+}
+
+html.dark-mode #footer p,
+html.dark-mode #footer address {
+	color: #a0a0a0;
+}
+
+/* Text muted */
+html.dark-mode .muted {
+	color: #a0a0a0;
+}
+
+html.dark-mode a.muted:hover,
+html.dark-mode a.muted:focus {
+	color: #b0b0b0;
+}
+
+/* Hero unit */
+html.dark-mode .hero-unit {
+	background-color: #2a2a2a;
+	color: #e0e0e0;
+}
+
+/* Pagination */
+html.dark-mode .pagination ul > li > a,
+html.dark-mode .pagination ul > li > span {
+	background-color: #2a2a2a;
+	border-color: #3a3a3a;
+	color: #d0d0d0;
+}
+
+html.dark-mode .pagination ul > li > a:hover,
+html.dark-mode .pagination ul > li > a:focus {
+	background-color: #333333;
+	color: #ffffff;
+}
+
+html.dark-mode .pagination ul > .active > a,
+html.dark-mode .pagination ul > .active > span {
+	background-color: #0d6efd;
+	border-color: #0d6efd;
+	color: #ffffff;
+}
+
+/* Breadcrumbs */
+html.dark-mode .breadcrumb {
+	background-color: #2a2a2a;
+	border-color: #3a3a3a;
+}
+
+html.dark-mode .breadcrumb li {
+	color: #d0d0d0;
+}
+
+html.dark-mode .breadcrumb .divider {
+	color: #a0a0a0;
+}
+
+/* Labels and badges */
+html.dark-mode .label,
+html.dark-mode .badge {
+	background-color: #404040;
+	color: #e0e0e0;
+}
+
+/* Carousel */
+html.dark-mode .carousel-caption {
+	background-color: rgba(26, 26, 26, 0.8);
+	color: #e0e0e0;
+}
+
+/* HR */
+html.dark-mode hr {
+	border-top-color: #3a3a3a;
+	border-bottom-color: #1a1a1a;
+}
+
+/* Selection */
+html.dark-mode ::selection {
+	background-color: #0d6efd;
+	color: #ffffff;
+}
+
+html.dark-mode ::-moz-selection {
+	background-color: #0d6efd;
+	color: #ffffff;
+}
+
+/* Scrollbar styling for webkit browsers */
+html.dark-mode ::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+
+html.dark-mode ::-webkit-scrollbar-track {
+	background: #1a1a1a;
+}
+
+html.dark-mode ::-webkit-scrollbar-thumb {
+	background: #404040;
+	border-radius: 6px;
+}
+
+html.dark-mode ::-webkit-scrollbar-thumb:hover {
+	background: #505050;
+}
+
+/* Google Sheets iframe dark mode wrapper */
+html.dark-mode .iframe-dark-wrapper {
+	background-color: #1a1a1a;
+	padding: 20px;
+	border-radius: 8px;
+	border: 1px solid #3a3a3a;
+}
+
+html.dark-mode .iframe-dark-wrapper iframe {
+	border: 2px solid #3a3a3a;
+	border-radius: 4px;
+	filter: invert(0.9) hue-rotate(180deg);
+}
+
+html.dark-mode .iframe-dark-wrapper iframe img,
+html.dark-mode .iframe-dark-wrapper iframe [style*="background-image"] {
+	filter: invert(1) hue-rotate(180deg);
+}
+
+/* Mobile and Responsive Design */
+@media (max-width: 768px) {
+	/* Ensure dark mode works on small screens */
+	html.dark-mode body {
+		background-color: #1a1a1a;
+		color: #e0e0e0;
+	}
+
+	/* Navbar adjustments for mobile */
+	html.dark-mode .navbar .navbar-inner {
+		background-color: #2a2a2a;
+	}
+
+	html.dark-mode .navbar .nav > li > a {
+		background-color: #2a2a2a;
+		border-color: #3a3a3a;
+	}
+
+	/* Ensure collapsible menu has dark background */
+	html.dark-mode .nav-collapse,
+	html.dark-mode .nav-collapse.collapse {
+		background-color: #2a2a2a;
+	}
+
+	/* Adjust iframe wrapper for mobile */
+	html.dark-mode .iframe-dark-wrapper {
+		padding: 10px;
+	}
+
+	html.dark-mode .iframe-dark-wrapper iframe {
+		width: 100%;
+		height: 400px;
+	}
+
+	/* Fix carousel captions on mobile */
+	html.dark-mode .carousel-caption {
+		background-color: rgba(26, 26, 26, 0.9);
+	}
+
+	/* Mobile sidebar adjustments */
+	html.dark-mode .bs-docs-sidenav {
+		width: 100% !important;
+		max-height: none !important;
+	}
+}
+
+@media (max-width: 480px) {
+	/* Extra small screens */
+	html.dark-mode .iframe-dark-wrapper iframe {
+		height: 300px;
+	}
+
+	/* Adjust text sizes for readability */
+	html.dark-mode body {
+		font-size: 14px;
+	}
+
+	html.dark-mode h1 {
+		font-size: 28px;
+	}
+
+	html.dark-mode h2 {
+		font-size: 24px;
+	}
+
+	html.dark-mode h3 {
+		font-size: 20px;
+	}
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+	html.dark-mode body {
+		background-color: #000000;
+		color: #ffffff;
+	}
+
+	html.dark-mode .navbar .navbar-inner,
+	html.dark-mode .bs-docs-sidenav,
+	html.dark-mode .feature-item {
+		background-color: #000000;
+		border-color: #ffffff;
+	}
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+	html.dark-mode * {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}

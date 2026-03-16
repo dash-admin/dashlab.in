@@ -6,10 +6,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="DaSH Lab, People, BITS Pilani, K K Birla Goa Campus, India">
       <meta name="author" content="">
+      <link rel="icon" type="image/png" href="thumbs/dashlab_logo_white_bg.png?v=1">
+      <script>(function(){try{if(localStorage.getItem("dashlab-theme")==="dark"){document.documentElement.classList.add("dark-mode");}}catch(e){}})();</script>
       <!-- Le styles -->
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-      <link href="css/theme.css" rel="stylesheet">
+      <link href="css/theme.css?v=3" rel="stylesheet">
+      <link href="css/dark-mode.css" rel="stylesheet">
       <link href="css/scroll.css" rel="stylesheet">
       <script type="text/javascript">
          (function(c,l,a,r,i,t,y){
@@ -31,8 +34,8 @@
    <body>
       <div class="container">
          <header class="jumbotron subhead" id="overview">
-            <p class="lead"> BITS Pilani, K. K. Birla Goa Campus, India </p>
-            <h1>DaSH Lab (Data, Systems and HPC)</h1>
+            <h1>Data, Systems and HPC (DaSH) Lab</h1>
+            <p class="lead"> BITS Pilani K. K. Birla Goa Campus, India </p>
          </header>
          <div class="masthead">
             <div class="navbar">
@@ -65,12 +68,18 @@
             <div class="span3 bs-docs-sidebar" id="navparent">
                <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="200" data-offset-bottom="260">
                   <li><a href="#principalinvestigator"> Principal Investigator </a></li>
-                  <li><a href="#postdoc">Postdoc</a></li>
                   <li><a href="#phd">Ph.D. Students</a></li>
-                  <li><a href="#masters">Masters Students</a></li>
                   <li><a href="#undergraduate">Undergraduate Students</a></li>
-                  <li><a href="#alumni">Alumni</a></li>
+                  <li><a href="#fdalumni">First-Degree Alumni</a></li>
+                  <li><a href="#hdalumni">Higher-Degree Alumni</a></li>
                </ul>
+            </div>
+            <div id="image-lightbox" style="display:none; position:fixed; z-index:3000; inset:0; background:rgba(0,0,0,0.96); align-items:center; justify-content:center; padding:0; overflow:hidden; touch-action:none;">
+               <button id="image-lightbox-prev" type="button" style="position:absolute; left:14px; top:50%; transform:translateY(-50%); background:transparent; border:none; color:#fff; font-size:42px; line-height:1; cursor:pointer;" aria-label="Previous image">&#8592;</button>
+               <button id="image-lightbox-next" type="button" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); background:transparent; border:none; color:#fff; font-size:42px; line-height:1; cursor:pointer;" aria-label="Next image">&#8594;</button>
+               <button id="image-lightbox-close" type="button" style="position:absolute; top:14px; right:18px; background:transparent; border:none; color:#fff; font-size:36px; line-height:1; cursor:pointer;" aria-label="Close image viewer">×</button>
+               <img id="image-lightbox-img" src="" alt="" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:auto; height:auto; max-width:96vw; max-height:96vh; display:block; margin:0; border:none; box-shadow:none; border-radius:0;" />
+               <div id="image-lightbox-caption" style="position:absolute; left:50%; bottom:16px; transform:translateX(-50%); color:#fff; font-size:16px; line-height:1.3; padding:6px 12px; background:rgba(0,0,0,0.35); border-radius:4px; text-align:center; max-width:90vw; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"></div>
             </div>
             <div class="span8 offset1">
                <section id="principalinvestigator">
@@ -95,24 +104,6 @@
                   </div>
                </section>
                <hr>
-               <section id="postdoc">
-                  <div class="page-header">
-                     <h3>Postdoctoral Research Associate</h3>
-                  </div>
-                  <div class="row-fluid">
-                     <div class="span3">
-                        <a href="" class="thumbnail">
-                        <img src="thumbs/members/pinki.jpeg" alt="Pinki Yadav"/>
-                        </a>
-                     </div>
-                     <div class="span9">
-                        <h4>Pinki Yadav</h4>
-                        <p><b>Jan 2023 - present</b></p>
-                        <p>Ph.D. in Mathematics, BITS Pilani - Pilani Campus<br/><b>Research Area: </b>Privacy-Aware Data Compression</p>
-                     </div>
-                  </div>
-               </section>
-               <hr>
                <section id="phd">
                   <div class="page-header">
                      <h3>Ph.D. Students</h3>
@@ -124,9 +115,9 @@
                         </a>
                      </div>
                      <div class="span9">
-                        <h4>Aishwarya Parab</h4>
+                        <h4><a href="https://www.linkedin.com/in/aishwarya-parab-1621a4a1/">Aishwarya Parab</a></h4>
                         <p><b>Sep 2022 - present</b></p>
-                        <p>Co-advisor: Dr. Kunal Korgaonkar</p>
+                        <p><b>Co-advisor:</b> Dr. Kunal Korgaonkar</p>
                         <p><b>Research Area: </b>Blockchain and Smart Contracts</p>
                      </div>
                   </div>
@@ -138,26 +129,50 @@
                         </a>
                      </div>
                      <div class="span9">
-                        <h4>Aishwarya Jayashankar</h4>
+                        <h4><a href="https://www.linkedin.com/in/aishwarya-jayashankar/">Aishwarya Jayashankar</a></h4>
                         <p><b>Sep 2023 - present</b></p>
                         <p><b>Research Area: </b>MLOps</p>
                      </div>
                   </div>
-               </section>
-               <hr>
-               <section id="masters">
-                  <div class="page-header">
-                     <h3>Masters Students</h3>
-                  </div>
+                  <hr>
                   <div class="row-fluid">
-                     <ul class="thumbnails da-thumbs">
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/jitesh.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Jitesh Ochani<br/>Jan 2024 - present</center></p>
-                        </li>
-                     </ul>
+                     <div class="span3">
+                        <a href="" class="thumbnail">
+                        <img src="thumbs/members/manoj.jpeg" alt="Manoj Dongare"/>
+                        </a>
+                     </div>
+                     <div class="span9">
+                        <h4><a href="https://www.linkedin.com/in/manojdon777/">Manoj Dongare</a></h4>
+                        <p><b>Nov 2024 - present</b></p>
+                        <p><b>Research Area: </b>Parallel File Systems</p>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="row-fluid">
+                     <div class="span3">
+                        <a href="" class="thumbnail">
+                        <img src="thumbs/members/faruque.jpeg" alt="Faruque Aziz"/>
+                        </a>
+                     </div>
+                     <div class="span9">
+                        <h4><a href="https://www.linkedin.com/in/faruque-aziz/">Faruque Aziz</a></h4>
+                        <p><b> Aug 2025 - present</b></p>
+                        <p><b>Co-advisors: </b>Dr. Sougata Sen (BITS),</p> <p>Dr. Afreen Huq (RMIT), Dr. Malka N. Halgamuge (RMIT)</p>
+                        <p><b>Research Area: </b>Systems for edge-case Machine Learning</p>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="row-fluid">
+                     <div class="span3">
+                        <a href="" class="thumbnail">
+                        <img src="thumbs/members/marichamy.jpeg" alt="Marichamy Kasi"/>
+                        </a>
+                     </div>
+                     <div class="span9">
+                        <h4><a href="">Marichamy Kasi</a></h4>
+                        <p><b>Aug 2025 - present</b></p>
+                        <p><b>Research Area:</b> Federated Learning </p>
+                     </div>
                   </div>
                </section>
                <hr>
@@ -166,239 +181,272 @@
                      <h3>Undergraduate Students</h3>
                   </div>
                   <div class="row-fluid">
-                     
-                  </div>
-                  
-                  <div class="row-fluid">
                      <ul class="thumbnails da-thumbs">
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/joel.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Joel Tony<br/>Aug 2022 - present</center></p>
-                        </li>
-                        <!-- <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/naman.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Naman Agarwal<br/>Nov 2022 - present</center></p>
-                        </li> -->
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/sarang.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Sarang S<br/>Nov 2022 - present</center></p>
-                        </li>
-                        
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/yash.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Yash Bhisikar<br/>Mar 2023 - present</center></p>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="row-fluid">
-                     <ul class="thumbnails da-thumbs">
-                        <!-- <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/nakul.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Nakul Bachawat<br/>Jan 2023 - present</center></p>
-                        </li>
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/man.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Advaith Krishna<br/>Jan 2023 - present</center></p>
-                        </li> -->
-                                           
-                     </ul>
-                  </div>
-                  <div class="row-fluid">
-                     <ul class="thumbnails da-thumbs">
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/vijay.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Vijay Dharmaji<br/>Mar 2023 - present</center></p>
-                        </li> 
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/aditya.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Aditya Shiva Sharma<br/>Apr 2023 - present</center></p>
-                        </li>
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/sidcv.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Siddharth C Vivek<br/>Apr 2023 - present</center></p>
-                        </li>
-                        
-                                                                  
-                     </ul>
-                  </div>
-                  <div class="row-fluid">
-                     <ul class="thumbnails da-thumbs">
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/druva.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Druva Dhakshinamoorthy<br/>Apr 2023 - present</center></p>
-                        </li>
                         <li class="span4">
                            <a class="thumbnail" >
                            <img alt="" src="thumbs/members/aalhad.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center>Aalhad Sawane<br/>Sept 2023 - present</center></p>
-                        </li>                        
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/bhavya.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Bhavya Bajaj<br/>Sept 2023 - present</center></p>
-                        </li>
-                        <!-- <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/pranav.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Pranav Anand<br/>Apr 2023 - present</center></p>
-                        </li> -->
-                        <!-- <li class="span4">
-                           <a class="thumbnail">
-                           <img alt="" src="thumbs/members/kinshuk.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Kinshuk Goel<br/>Aug 2023 - present</center></p>
-                        </li>  -->
-                     </ul>
-                  </div>
-                  <div class="row-fluid">
-                     <ul class="thumbnails da-thumbs">
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/kaaviya.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Kaaviya Uthirapandian<br/>Sept 2023 - present</center></p>
-                        </li>
-                        <!-- <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/kunal.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Kunal Mishra<br/>Sept 2023 - present</center></p>
-                        </li> -->
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/manit.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Manit Tanwar<br/>Sept 2023 - present</center></p>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/aalhad-sawane/">Aalhad Sawane</a></center></p>
                         </li>
                         <li class="span4">
                            <a class="thumbnail" >
                            <img alt="" src="thumbs/members/man.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center>Mukul Krishnan<br/>Sept 2023 - present</center></p>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/abhishek-kumar-050194179/">Abhishek Kumar</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/adithya.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/adithya-balasubramanian-1428a9297/">Adithya Balasubramanian</a></center></p>
                         </li>
                      </ul>
                   </div>
                   <div class="row-fluid">
                      <ul class="thumbnails da-thumbs">
-                        
-                        <li class="span4">
-                            <a class="thumbnail">
-                            <img alt="" src="thumbs/members/nirmal.jpeg" style="height: 125px;">            
-                            </a>
-                            <p class="caption"> <center>Nirmal Govindaraj<br/>Sept 2023 - present</center></p>
-                         </li>
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/man.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center>Prithvi Vishak<br/>Sept 2023 - present</center></p>
-                        </li>
                         <li class="span4">
                            <a class="thumbnail" >
                            <img alt="" src="thumbs/members/advik.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center>Advik Raj Basani<br/>Nov 2023 - present</center></p>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/a3v1k/">Advik Raj Basani</a></center></p>
                         </li>
-                     </ul>
-                  </div>
-                  <div class="row-fluid">
-                     <ul class="thumbnails da-thumbs">
-                        <!-- <li class="span4">
+                        <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/man.jpeg" style="height: 125px;">            
+                           <img alt="" src="thumbs/members/anish.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center>Subroto Majumder<br/>Sept 2023 - present</center></p>
-                        </li> -->
-                        <!-- <li class="span4">
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/anish-sathyanarayanan-53b69029b/">Anish S</a></center></p>
+                        </li>
+                        <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/man.jpeg" style="height: 125px;">            
+                           <img alt="" src="thumbs/members/arnavm.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center>Arjun Jagtap<br/>Oct 2023 - present</center></p>
-                        </li> -->
-                        
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/arnav-malhotra-4019b2250/">Arnav Malhotra</a></center></p>
+                        </li>
                      </ul>
                   </div>
                   <div class="row-fluid">
                      <ul class="thumbnails da-thumbs">
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/arnavg.jpeg" style="height: 125px;">            
+                           <img alt="" src="thumbs/members/aryan.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center>Arnav Gupta<br/>Nov 2023 - present</center></p>
+                           <p class="caption"> <center>Aryan Bethmangalkar</center></p>
                         </li>
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/ayushb.jpeg" style="height: 125px;">            
+                           <img alt="" src="thumbs/members/atharva.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center>Ayush Bhardwaj<br/>Nov 2023 - present</center></p>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/atharvap2505/">Atharva Pandit</a></center></p>
                         </li>
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/sidk.jpeg" style="height: 125px;">            
+                           <img alt="" src="thumbs/members/bhavya.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center>Siddhant Kulkarni<br/>Nov 2023 - present</center></p>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/bhavya-bajaj-772740289/">Bhavya Bajaj</a></center></p>
                         </li>
-                        
                      </ul>
                   </div>
                   <div class="row-fluid">
                      <ul class="thumbnails da-thumbs">
                         <li class="span4">
                            <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/haroon.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/haroonbedi/">Haroon Bedi</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/harsh.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/harshchothani/">Harsh Chothani</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/harshp.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/harshpoddar03">Harsh Poddar</a></center></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails da-thumbs">
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/jayant.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/jayant-chandwani-4088252a0/">Jayant Chandwani</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/kaaviya.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/kaaviya-u-b572b5294/">Kaaviya Uthirapandian</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
                            <img alt="" src="thumbs/members/man.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center>Shashank Rana<br/>Mar 2024 - present</center></p>
+                           <p class="caption"> <center>Khushraj Rathod</center></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails da-thumbs">
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/kunal.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/kunal-mishra-8238bb187/">Kunal Mishra</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/manit.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/manit-tanwar-a06748281/">Manit Tanwar</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/man.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/mukul-krishnan/">Mukul Krishnan</a></center></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails da-thumbs">
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/nischit.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/nischitkumar/">Nischit Kumar</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/ojas.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/ojas-marathe-b48212323/">Ojas Marathe</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/prakhar.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/prakharp0/">Prakhar Pradhan</a></center></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails da-thumbs">
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/pranava.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/pranav-anand-2aa46925a/">Pranav Anand</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/pranavm.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/pranav-m-r/">Pranav M R</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/man.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="github.com/Pippadi">Prithvi Vishak</a></center></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails da-thumbs">
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/riddhiman.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/riddhiman-sengupta-a648a1256/">Riddhiman Sengupta</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/man.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/rohan-jeendgar-01474027a/">Rohan Jeendgar</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/shivani.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="www.linkedin.com/in/shivani-deo-602690395">Shivani Deo</a></center></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails da-thumbs">
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/soham.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/soham-dambalkar-02468126b/">Soham Dambalkar</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/subroto.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/subroto-majumder/">Subroto Majumder</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/surya.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/sameer-datta-9852801b7/">Surya Datta</a></center></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails da-thumbs">
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/utkarsh.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/utkarsh-sharma-37090a27a/">Utkarsh Sharma</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/vimarsh.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/vimarshshah/">Vimarsh Shah</a></center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/yogesh.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/yogesh-singla-793072251/">Yogesh Singla</a></center></p>
                         </li>
                      </ul>
                   </div>
                </section>
                <hr>
-               <section id="alumni">
+               <section id="fdalumni">
                   <div class="page-header">
-                     <h3>Alumni</h3>
+                     <h3>First-Degree Alumni</h3>
                   </div>
                   <div class="row-fluid">
                      <ul class="thumbnails da-thumbs">
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/amit.jpeg" style="height: 125px;">            
+                           <img alt="" src="thumbs/members/sarang.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/amit-chauhan-2970ba1b6/">Amit Chauhan</a><br/>B.E. CSE (2022)<br/>First Job: Cisco</center></p>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/saaarangs/">Sarang S</a><br/>B.E. CSE (2026)<br/>Cisco, University of Maryland</center></p>
                         </li>
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/sarthak.jpeg" style="height: 125px;">            
+                           <img alt="" src="thumbs/members/vijay.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/sarthak-chaudhary/">Sarthak Chaudhary</a><br/>B.E. CSE (2023)<br/>First Job: Capital One</center></p>
-                        </li>
+                           <p class="caption"> <center>Vijay Dharmaji<br/>B.E. CSE (2026)<br/>Sprinklr</center></p>
+                        </li> 
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/hitarth.jpeg" style="height: 125px;">            
+                           <img alt="" src="thumbs/members/ass.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/hitarth-kothari-672226193/">Hitarth Kothari</a><br/>B.E. CSE (2023)<br/>First Job: Rigi</center></p>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/aditya-shiva-sharma/">Aditya Shiva Sharma</a><br/>B.E. CSE (2026)<br/>Siemens</center></p>
                         </li>
                      </ul>
                   </div>
@@ -406,21 +454,21 @@
                      <ul class="thumbnails da-thumbs">
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/vineet.jpeg" style="height: 125px;">            
+                           <img alt="" src="thumbs/members/sidcv.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/saivineet/">S Sai Vineet</a><br/>B.E. CSE (2023)<br/>First Job: Google</center></p>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/siddharth-chaitra-vivek-6b9836259/">Siddharth C Vivek</a><br/>B.E. CSE (2026)<br/>Eightfold AI, PayPal</center></p>
                         </li>
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/natasha.jpeg" style="height: 125px;">            
+                           <img alt="" src="thumbs/members/druva.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/natasha-joseph-a894a9193/">Natasha Meena Joseph</a><br/>B.E. CSE (2023)<br/>First Job: Uber</center></p>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/druva-d/">Druva Dhakshinamoorthy</a><br/>B.E. CSE (2026)<br/>e6data, LLNL</center></p>
                         </li>
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/paras.jpeg" style="height: 125px;">            
+                           <img alt="" src="thumbs/members/joel.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/parasmittal099/?originalSubdomain=in">Paras Mittal</a><br/>B.E. CSE (2023)<br/>First Job: Zeotap</center></p>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/joel-tony/">Joel Tony</a><br/>B.E. CSE (2025)<br/>MSR India, e6data</center></p>
                         </li>
                      </ul>
                   </div>
@@ -428,21 +476,65 @@
                      <ul class="thumbnails da-thumbs">
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/shreyas.jpeg" style="height: 125px;">            
+                           <img alt="" src="thumbs/members/yash.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/shreyas-somvanshi-2383121a8/?originalSubdomain=in">Shreyas Somvanshi</a><br/>B.E. ECE (2023)<br/>First Job: Amazon</center></p>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/yash-bhisikar/">Yash Bhisikar</a><br/>B.E. CSE (2025)<br/>e6data</center></p>
                         </li>
+                        <li class="span4">
+                            <a class="thumbnail">
+                            <img alt="" src="thumbs/members/nirmal.jpeg" style="height: 125px;">            
+                            </a>
+                            <p class="caption"> <center><a href="https://www.linkedin.com/in/nirmal-govindaraj-291283227/">Nirmal Govindaraj</a><br/>B.E. CSE (2025)<br/>e6data, D.E. Shaw</center></p>
+                         </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/arnavg.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center>Arnav Gupta<br/>B.E. CSE (2025)<br/></center></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails da-thumbs">
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/ayushb.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/aybh/">Ayush Bhardwaj</a><br/>B.E. CSE (2025)<br/>Columbia Business School, D.E. Shaw</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/sidk.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/siddhantkulkarni/">Siddhant Kulkarni</a><br/>B.E. CSE (2025)<br/>Google, Atlassian</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/shashank.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/shashank-rana-29891a236/">Shashank Rana</a><br/>B.E. CSE (2025)<br/>Google, JPMC</center></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails da-thumbs">
                         <li class="span4">
                            <a class="thumbnail" >
                            <img alt="" src="thumbs/members/preyank.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/preyank-mota-740130193/?originalSubdomain=in">Preyank Bhavesh Mota</a><br/>B.E. CSE (2024)<br/>First Job: </center></p>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/preyank-mota-740130193/">Preyank Bhavesh Mota</a><br/>B.E. CSE (2024)<br/>Amazon</center></p>
                         </li>
                         <li class="span4">
                            <a class="thumbnail" >
                            <img alt="" src="thumbs/members/saksham.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/sakshambansal12/?originalSubdomain=in">Saksham Bansal</a><br/>B.E. CSE (2024)<br/>First Job: </center></p>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/sakshambansal12/">Saksham Bansal</a><br/>B.E. CSE (2024)<br/>Kore.ai, Nutanix</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/arihant.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/arihantbansal/">Arihant Bansal</a><br/>B.E. ECE (2024)<br/>Arcium</center></p>
                         </li>
                      </ul>
                   </div>
@@ -450,21 +542,21 @@
                      <ul class="thumbnails da-thumbs">
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/arihant.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/arihantbansal/">Arihant Bansal</a><br/>B.E. ECE (2024)<br/>First Job: </center></p>
-                        </li>
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/yuvraj.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/yuvraj-singh-bhadauria-927a1b1b9/">Yuvraj Singh Bhadauria</a><br/>B.E. CSE (2023)<br/>First Job: </center></p>
-                        </li>
-                        <li class="span4">
-                           <a class="thumbnail" >
                            <img alt="" src="thumbs/members/arnav.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/arnavborkar/">Arnav Borkar</a><br/>B.E. CSE (2024)<br/>First Job: </center></p>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/arnavborkar/">Arnav Borkar</a><br/>B.E. CSE (2024)<br/>e6data</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/avig.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/avi-goyal-400/">Avi Goyal</a><br/>B.E. CSE (2024)<br/>Cisco</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/himanish.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/him-ag/">Himanish Agarwal</a><br/>B.E. CSE (2024)<br/>Georgia Tech</center></p>
                         </li>
                      </ul>
                   </div>
@@ -472,60 +564,109 @@
                      <ul class="thumbnails da-thumbs">
                         <li class="span4">
                            <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/man.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/avi-goyal-400/">Avi Goyal</a><br/>B.E. CSE (2024)<br/>First Job: </center></p>
-                        </li>
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/man.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/him-ag/">Himanish Agarwal</a><br/>B.E. CSE (2024)<br/>First Job: </center></p>
-                        </li>
-                        <li class="span4">
-                           <a class="thumbnail" >
                            <img alt="" src="thumbs/members/manank.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/manank20/">Manank Patel</a><br/>B.E. CSE (2024)<br/>First Job: </center></p>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/manank20/">Manank Patel</a><br/>B.E. CSE (2024)<br/>Arista Networks</center></p>
                         </li>
-                     </ul>
-                  </div>
-                  <div class="row-fluid">
-                     <ul class="thumbnails da-thumbs">
                         <li class="span4">
                            <a class="thumbnail" >
                            <img alt="" src="thumbs/members/pranay.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/pranay-varshney-43b677204/">Pranay Varshney</a><br/>B.E. CSE (2024)<br/>First Job: </center></p>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/pranay-varshney-43b677204/">Pranay Varshney</a><br/>B.E. CSE (2024)<br/>DevRex, Qualcomm</center></p>
                         </li>
                         <li class="span4">
                            <a class="thumbnail" >
                            <img alt="" src="thumbs/members/satyam.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/satyambansal098/">Satyam Bansal</a><br/>B.E. CSE (2024)<br/>First Job:</center></p>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/satyambansal098/">Satyam Bansal</a><br/>B.E. CSE (2024)<br/>Arcesium</center></p>
                         </li>
                      </ul>
                   </div>
-                  <hr>
                   <div class="row-fluid">
                      <ul class="thumbnails da-thumbs">
                         <li class="span4">
                            <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/sarthak.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/sarthak-chaudhary/">Sarthak Chaudhary</a><br/>B.E. CSE (2023)<br/>Capital One</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/hitarth.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/hitarth-kothari-672226193/">Hitarth Kothari</a><br/>B.E. CSE (2023)<br/>Indian School of Business</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/vineet.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/saivineet/">S Sai Vineet</a><br/>B.E. CSE (2023)<br/>Context AI, Google</center></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails da-thumbs">
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/natasha.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/natasha-joseph-a894a9193/">Natasha Meena Joseph</a><br/>B.E. CSE (2023)<br/>Uber, Adobe</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/paras.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/parasmittal099/">Paras Mittal</a><br/>B.E. CSE (2023)<br/>ICICI, University of Florida</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/shreyas.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/shreyas-somvanshi-2383121a8/">Shreyas Somvanshi</a><br/>B.E. ECE (2023)<br/>Amazon</center></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails da-thumbs">
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/yuvraj.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/yuvraj-singh-bhadauria-927a1b1b9/">Yuvraj Singh Bhadauria</a><br/>B.E. CSE (2023)<br/>FlintX, NUS</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/amit.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/amit-chauhan-2970ba1b6/">Amit Chauhan</a><br/>B.E. CSE (2022)<br/>Cisco</center></p>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               <hr>
+               <section id="hdalumni">
+                  <div class="page-header">
+                     <h3>Higher-Degree Alumni</h3>
+                  </div>
+                  <div class="row-fluid">
+                     <ul class="thumbnails da-thumbs">
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/jitesh.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/jiteshochani/">Jitesh Ochani</a><br/>M.E. CSE (2025)<br/>Atlair</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
                            <img alt="" src="thumbs/members/tushar.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/tushar-barman-b82a1b11a/">Tushar Barman</a><br/>M.E. CSE (2024)<br/>First Job: </center></p>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/tushar-barman-b82a1b11a/">Tushar Barman</a><br/>M.E. CSE (2024)<br/>Intel Corp.</center></p>
                         </li>
                         <li class="span4">
                            <a class="thumbnail" >
                            <img alt="" src="thumbs/members/hari.jpg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/hari-vamsi-krishna-283660119/">Hari Vamsi Krishna</a><br/>M.E. CSE (2024)<br/>First Job: </center></p>
-                        </li>
-                        <li class="span4">
-                           <a class="thumbnail" >
-                           <img alt="" src="thumbs/members/sreenath.jpeg" style="height: 125px;">            
-                           </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/sreenath-t-m/">Sreenath T M</a><br/>M.E. CSE (2024)<br/>First Job: </center></p>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/hari-vamsi-krishna-283660119/">Hari Vamsi Krishna</a><br/>M.E. CSE (2024)<br/>Druva</center></p>
                         </li>
                      </ul>
                   </div>
@@ -533,9 +674,21 @@
                      <ul class="thumbnails da-thumbs">
                         <li class="span4">
                            <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/sreenath.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/sreenath-t-m/">Sreenath T M</a><br/>M.E. CSE (2024)<br/>IBM, Infosys</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
                            <img alt="" src="thumbs/members/madhu.jpeg" style="height: 125px;">            
                            </a>
-                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/madhu-m-pandurangi-b49677156/">Madhu Pandurangi</a><br/>M.E. CSE (2024)<br/>First Job: </center></p>
+                           <p class="caption"> <center><a href = "https://www.linkedin.com/in/madhu-m-pandurangi-b49677156/">Madhu Pandurangi</a><br/>M.E. CSE (2024)<br/>Druva</center></p>
+                        </li>
+                        <li class="span4">
+                           <a class="thumbnail" >
+                           <img alt="" src="thumbs/members/pinki.jpeg" style="height: 125px;">            
+                           </a>
+                           <p class="caption"> <center><a href="https://www.linkedin.com/in/dr-pinki-yadav-468a46133/">Pinki Yadav</a><br/>Ph.D. Mathematics<br/>BITS Pilani</center></p>
                         </li>
                      </ul>
                   </div>
@@ -548,10 +701,10 @@
             <div class="row-fluid">
                <div class="span5">
                   <h3>Contact Information</h3>
-                     <h5 style="color:white;"><b>Lab Meeting: </b>Tuesdays (6:30 PM - 7:30 PM IST)</h5>
+                     <h5 style="color:white;"><b>Lab Meeting: </b>Tuesdays (6:30 PM - 8:30 PM IST)</h5>
                      <h5 style="color:white;"><b>PI: </b> <a href = "https://arnabkrpaul.github.io/">Arnab K. Paul</a></h5> 
-                     <h5 style="color:white;"><b>Email 1: </b>dashlab [DOT] cs [AT] gmail [DOT] com</h5>                    
-                     <h5 style="color:white;"><b>Email 2: </b>arnabp [AT] goa [DOT] bits-pilani [DOT] ac [DOT] in</h5>
+                     <h5 style="color:white;"><b>Email 1: </b>dashlab.cs@gmail.com</h5>                    
+                     <h5 style="color:white;"><b>Email 2: </b>arnabp@goa.bits-pilani.ac.in</h5>
                      <!---<p><b>Cell: </b>999-999-9999</p>
                      <a href="mailto:your.email@uni.edu">Email</a>--->
                </div>
@@ -561,8 +714,8 @@
                <div class="span5">
                   <h3>Lab Address</h3>
                   <h5 style="color:white">D-241, Department of CSIS<br>
-                     BITS Pilani, K K Birla Goa Campus<br>
-                     Zuarinagar, Goa<br>
+                     BITS Pilani K. K. Birla Goa Campus,<br>
+                     Sancoale, Goa<br>
                      India - 403726
                   </h5>
                </div>
@@ -578,12 +731,292 @@
       <!-- Placed at the end of the document so the pages load faster -->
       <script src="js/jquery-1.9.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
+      <script src="js/theme-toggle.js"></script>
       <script>
          $(document).ready(function() {
              $(document.body).scrollspy({
                  target: "#navparent"
              });
          });
+
+         (function () {
+            var peopleRoot = document.querySelector('.span8.offset1');
+            var photoLinks = peopleRoot ? peopleRoot.querySelectorAll('a.thumbnail') : null;
+            var lightbox = document.getElementById('image-lightbox');
+            var lightboxImg = document.getElementById('image-lightbox-img');
+            var lightboxCaption = document.getElementById('image-lightbox-caption');
+            var prevBtn = document.getElementById('image-lightbox-prev');
+            var nextBtn = document.getElementById('image-lightbox-next');
+            var closeBtn = document.getElementById('image-lightbox-close');
+            var photoItems = [];
+            var currentIndex = -1;
+
+            if (!peopleRoot || !photoLinks || !photoLinks.length || !lightbox || !lightboxImg || !lightboxCaption || !prevBtn || !nextBtn || !closeBtn) {
+               return;
+            }
+
+            function normalizeText(value) {
+               return (value || '').replace(/\s+/g, ' ').trim();
+            }
+
+            function findAncestorByClass(node, className) {
+               while (node && node !== document) {
+                  if (node.nodeType === 1 && node.classList && node.classList.contains(className)) {
+                     return node;
+                  }
+                  node = node.parentNode;
+               }
+               return null;
+            }
+
+            function findAncestorByTag(node, tagName) {
+               tagName = (tagName || '').toUpperCase();
+               while (node && node !== document) {
+                  if (node.nodeType === 1 && node.tagName === tagName) {
+                     return node;
+                  }
+                  node = node.parentNode;
+               }
+               return null;
+            }
+
+            function firstNonEmptyLine(value) {
+               var lines = (value || '').split(/\n+/);
+               var i;
+               for (i = 0; i < lines.length; i += 1) {
+                  var line = normalizeText(lines[i]);
+                  if (line) {
+                     return line;
+                  }
+               }
+               return '';
+            }
+
+            function getCaptionForLink(link, thumbImg) {
+               var listItem = findAncestorByTag(link, 'LI');
+               if (listItem) {
+                  var captionEl = listItem.querySelector('p.caption');
+                  if (captionEl) {
+                     var captionAnchor = captionEl.querySelector('a');
+                     if (captionAnchor) {
+                        var anchorText = normalizeText(captionAnchor.textContent || captionAnchor.innerText || '');
+                        if (anchorText) {
+                           return anchorText;
+                        }
+                     }
+
+                     var firstLine = firstNonEmptyLine(captionEl.innerText || captionEl.textContent || '');
+                     if (firstLine) {
+                        return firstLine;
+                     }
+
+                     var nameLink = captionEl.querySelector('a');
+                     if (nameLink) {
+                        var linkName = normalizeText(nameLink.innerText || nameLink.textContent || '');
+                        if (linkName) {
+                           return linkName;
+                        }
+                     }
+                  }
+
+                  // Last resort for list cards: use LI text and keep only the first meaningful line.
+                  var listText = firstNonEmptyLine(listItem.innerText || listItem.textContent || '');
+                  if (listText) {
+                     return listText;
+                  }
+               }
+
+               var row = findAncestorByClass(link, 'row-fluid');
+               if (row) {
+                  var heading = row.querySelector('.span9 h4');
+                  if (heading) {
+                     var headingText = normalizeText(heading.innerText || heading.textContent || '');
+                     if (headingText) {
+                        return headingText;
+                     }
+                  }
+               }
+
+               var altText = thumbImg ? normalizeText(thumbImg.getAttribute('alt')) : '';
+               return altText || 'Photo';
+            }
+
+            function getImageSource(link, thumbImg) {
+               var src = (thumbImg && thumbImg.getAttribute('src')) ? thumbImg.getAttribute('src') : '';
+               src = normalizeText(src);
+               if (src) {
+                  return src;
+               }
+
+               var href = normalizeText(link.getAttribute('href'));
+               if (href && href !== '#') {
+                  return href;
+               }
+
+               return '';
+            }
+
+            function buildPhotoItems() {
+               var i;
+               for (i = 0; i < photoLinks.length; i += 1) {
+                  var link = photoLinks[i];
+                  var thumbImg = link.getElementsByTagName('img')[0];
+                  var source = getImageSource(link, thumbImg);
+
+                  if (!source) {
+                     continue;
+                  }
+
+                  var caption = getCaptionForLink(link, thumbImg);
+                  photoItems.push({
+                     link: link,
+                     src: source,
+                     caption: caption
+                  });
+
+                  // Ensure thumbnail clicks never navigate to top/external pages.
+                  link.setAttribute('href', '#');
+               }
+            }
+
+            function findItemIndexByLink(link) {
+               var i;
+               for (i = 0; i < photoItems.length; i += 1) {
+                  if (photoItems[i].link === link) {
+                     return i;
+                  }
+               }
+               return -1;
+            }
+
+            function openAt(index) {
+               if (!photoItems.length) {
+                  return;
+               }
+
+               if (index < 0) {
+                  index = photoItems.length - 1;
+               }
+               if (index >= photoItems.length) {
+                  index = 0;
+               }
+
+               var item = photoItems[index];
+               if (!item) {
+                  return;
+               }
+
+               currentIndex = index;
+               lightboxImg.src = item.src;
+               lightboxImg.alt = item.caption;
+               lightboxCaption.textContent = item.caption;
+               lightbox.style.display = 'flex';
+               document.documentElement.style.overflow = 'hidden';
+               document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+               lightbox.style.display = 'none';
+               lightboxImg.src = '';
+               lightboxImg.alt = '';
+               lightboxCaption.textContent = '';
+               currentIndex = -1;
+               document.documentElement.style.overflow = '';
+               document.body.style.overflow = '';
+            }
+
+            function showPrevious() {
+               if (lightbox.style.display === 'flex') {
+                  openAt(currentIndex - 1);
+               }
+            }
+
+            function showNext() {
+               if (lightbox.style.display === 'flex') {
+                  openAt(currentIndex + 1);
+               }
+            }
+
+            buildPhotoItems();
+            if (!photoItems.length) {
+               return;
+            }
+
+            peopleRoot.onclick = function (event) {
+               event = event || window.event;
+               var target = event.target || event.srcElement;
+               var link = target;
+
+               while (link && link.tagName !== 'A') {
+                  link = link.parentNode;
+               }
+
+               if (!link || link.className.indexOf('thumbnail') === -1) {
+                  return;
+               }
+
+               if (event.preventDefault) {
+                  event.preventDefault();
+               } else {
+                  event.returnValue = false;
+               }
+
+               var selectedIndex = findItemIndexByLink(link);
+
+               if (selectedIndex === -1) {
+                  return;
+               }
+
+               openAt(selectedIndex);
+            };
+
+            lightboxImg.onclick = function (event) {
+               if (event && event.stopPropagation) {
+                  event.stopPropagation();
+               }
+            };
+
+            prevBtn.onclick = function (event) {
+               if (event && event.preventDefault) {
+                  event.preventDefault();
+               }
+               if (event && event.stopPropagation) {
+                  event.stopPropagation();
+               }
+               showPrevious();
+            };
+
+            nextBtn.onclick = function (event) {
+               if (event && event.preventDefault) {
+                  event.preventDefault();
+               }
+               if (event && event.stopPropagation) {
+                  event.stopPropagation();
+               }
+               showNext();
+            };
+
+            closeBtn.onclick = function (event) {
+               if (event && event.stopPropagation) {
+                  event.stopPropagation();
+               }
+               closeLightbox();
+            };
+
+            document.addEventListener('keydown', function (event) {
+               if (lightbox.style.display !== 'flex') {
+                  return;
+               }
+
+               if (event.key === 'Escape' || event.keyCode === 27) {
+                  closeLightbox();
+               } else if (event.key === 'ArrowLeft' || event.keyCode === 37 || event.key === '<') {
+                  showPrevious();
+               } else if (event.key === 'ArrowRight' || event.keyCode === 39 || event.key === '>') {
+                  showNext();
+               }
+            });
+         })();
          
       </script>
    </body>

@@ -1,6 +1,30 @@
 body {
 	padding-top: 15px;
 	padding-bottom: 0px;
+	font-family: Arial, sans-serif !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	text-rendering: optimizeLegibility !important;
+}
+
+html.theme-loading body {
+	visibility: hidden;
+}
+
+*, *::before, *::after {
+	font-family: Arial, sans-serif !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	text-rendering: optimizeLegibility !important;
+	will-change: auto !important;
+}
+
+.nav, .navbar, ul, li, a, p, h1, h2, h3, h4, h5, h6, .navbar-inner, .nav-collapse, .bs-docs-sidenav {
+	font-family: Arial, sans-serif !important;
+	font-weight: 400 !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	text-rendering: optimizeLegibility !important;
 }
 
 
@@ -519,8 +543,47 @@ img.publications-thumb {
 	height: 150px;
 }
 
+#collaborators .thumbnails li img {
+	background-color: #fff;
+	display: inline-block;
+	padding: 6px;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
 img.carousel-image {
 	width: 100%;
+	height: 520px;
+	object-fit: contain;
+	object-position: center;
+	background-color: transparent;
+}
+
+/* Keep member photo tiles on a consistent canvas across mixed aspect ratios. */
+#principalinvestigator .thumbnail > img,
+#postdoc .thumbnail > img,
+#phd .thumbnail > img {
+	width: 100%;
+	height: 190px;
+	object-fit: contain;
+	object-position: center;
+	background-color: #fff;
+}
+
+#undergraduate .thumbnails.da-thumbs .thumbnail > img,
+#fdalumni .thumbnails.da-thumbs .thumbnail > img,
+#hdalumni .thumbnails.da-thumbs .thumbnail > img {
+	width: 100%;
+	height: 125px !important;
+	object-fit: contain;
+	object-position: center;
+	background-color: #fff;
+}
+
+@media (max-width: 768px) {
+	img.carousel-image {
+		height: 300px;
+	}
 }
 
 li.publication {
@@ -585,4 +648,40 @@ ul.sponsors {
 #footer address {
 	color: #8F8F8F;
 	font-size: 11px;
+}
+
+.theme-toggle-btn {
+	position: fixed;
+	right: 16px;
+	top: 16px;
+	z-index: 1200;
+	border: 1px solid #d0d0d0;
+	background: #ffffff;
+	color: #222222;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	border-radius: 999px;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 1;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.theme-toggle-btn:hover {
+	background: #f4f4f4;
+}
+
+body.dark-mode .theme-toggle-btn {
+	background: #2a2a2a;
+	color: #f0f0f0;
+	border-color: #4a4a4a;
+}
+
+body.dark-mode .theme-toggle-btn:hover {
+	background: #333333;
 }
